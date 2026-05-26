@@ -101,10 +101,7 @@ This project is licensed under the **MIT License** – see the `LICENSE` file fo
 
 ---
 
-## 📞 Contact
-- **Author:** arqam66
-- **GitHub:** https://github.com/arqam66/smiu_room_checker
-- **Issues:** Open a ticket in the repository for bugs, feature requests, or questions.
+
 
 ---
 
