@@ -1,0 +1,14 @@
+.mapScale {
+  transform: scale(var(--map-scale));
+  transition: transform 0.3s ease;
+}
+
+.transitionSmooth {
+  transition: all 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.pathAnimation {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: dash 5s linear forwards;
+}
