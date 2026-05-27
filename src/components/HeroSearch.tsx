@@ -47,17 +47,17 @@ export default function HeroSearch({
     : [];
 
   return (
-    <section className="relative mb-12 rounded-xl border border-[#1A1A1A]/10 bg-[#E5E2D9]" id="hero-banner">
-      {/* Subtle beige gradients for low contrast publication look */}
+    <section className="relative mb-8 sm:mb-12 rounded-xl border border-[#1A1A1A]/10 bg-[#E5E2D9]" id="hero-banner">
+      {/* Subtle beige gradients */}
       <div className="absolute inset-0 z-0 overflow-hidden rounded-xl">
         <div className="absolute inset-0 bg-gradient-to-t from-[#F9F7F2] via-[#F9F7F2]/80 to-transparent"></div>
         <div className="absolute inset-x-0 top-0 h-full bg-[#FAF9F6]/20"></div>
       </div>
 
       {/* Hero Content Area */}
-      <div className="relative z-10 px-6 pt-12 pb-14 flex flex-col items-center text-center">
-        {/* Official Branded Logo Emblem */}
-        <div className="mb-6 h-28 w-28 sm:h-36 sm:w-36 transition-transform hover:scale-105 duration-350 bg-white rounded-2xl shadow-lg border border-[#1A1A1A]/10 p-2.5 overflow-hidden flex items-center justify-center shrink-0">
+      <div className="relative z-10 px-3 sm:px-6 pt-7 sm:pt-12 pb-8 sm:pb-14 flex flex-col items-center text-center">
+        {/* Logo */}
+        <div className="mb-4 sm:mb-6 h-16 w-16 sm:h-28 sm:w-28 md:h-36 md:w-36 transition-transform hover:scale-105 duration-350 bg-white rounded-2xl shadow-lg border border-[#1A1A1A]/10 p-2 overflow-hidden flex items-center justify-center shrink-0">
           <img
             src={logoImg}
             alt="SMIU Brand Logo"
@@ -66,55 +66,38 @@ export default function HeroSearch({
           />
         </div>
 
-        {/* Dynamic Editorial Typography Title */}
-        <div className="mb-4 flex flex-col items-center justify-center gap-2.5">
-          <h2 className="font-headline text-3xl sm:text-5xl md:text-6xl font-light tracking-tighter text-[#1A1A1A] leading-none mb-2">
+        {/* Title */}
+        <div className="mb-2 sm:mb-4 flex flex-col items-center gap-1">
+          <h2 className="font-headline text-2xl sm:text-5xl md:text-6xl font-light tracking-tighter text-[#1A1A1A] leading-none">
             Spaces <span className="italic font-normal font-headline text-[#D1512D]">in</span> Dialogue
           </h2>
         </div>
-        
-        <p className="mx-auto mb-10 max-w-xl text-xs sm:text-sm italic font-serif text-[#1A1A1A]/70 leading-relaxed font-semibold">
-          An exploration into lecture halls, computer laboratories and syndicate chambers configured inside Sindh Madressatul Islam's historic physical registry.
+
+        <p className="mx-auto mb-5 sm:mb-10 max-w-xs sm:max-w-xl text-[10px] sm:text-xs md:text-sm italic font-serif text-[#1A1A1A]/70 leading-relaxed font-semibold px-1">
+          Explore lecture halls, labs and syndicate chambers inside SMIU's historic campus registry.
         </p>
 
-        {/* Publication Style Search Box Boxed inside Relative bounds for floating suggestions dropdown */}
-        <div className="relative w-full max-w-2xl px-2 sm:px-0">
+        {/* Search Box */}
+        <div className="relative w-full max-w-2xl">
           <div className="search-focus w-full bg-[#FAF9F6] border border-[#1A1A1A]/15 rounded flex flex-col sm:flex-row items-stretch sm:items-center transition-all p-1 gap-1 sm:gap-0">
             <div className="flex items-center flex-1 min-w-0">
-              <div 
-                className="flex items-center pl-3 pr-2 text-[#1A1A1A]/50 shrink-0 cursor-pointer hover:text-[#D1512D] transition-colors"
-                onClick={() => {
-                  setShowSuggestions(false);
-                  setTimeout(() => {
-                    const el = document.getElementById('left-panel-container');
-                    if (el) {
-                      el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                    }
-                  }, 120);
-                }}
-              >
-                <Search className="h-4.5 w-4.5 text-[#1A1A1A] hover:scale-110 transition-transform" />
+              <div className="flex items-center pl-3 pr-2 text-[#1A1A1A]/50 shrink-0">
+                <Search className="h-4 w-4 text-[#1A1A1A]" />
               </div>
               <input
                 type="text"
-                className="w-full bg-transparent border-0 ring-0 text-xs sm:text-sm italic text-[#1A1A1A] placeholder:text-[#1A1A1A]/40 outline-none focus:outline-none focus:ring-0 py-2.5 sm:py-3"
-                placeholder="Search rooms, labs, floors ('CR-A02', 'IT-Tower')..."
+                className="w-full bg-transparent border-0 ring-0 text-[11px] sm:text-sm italic text-[#1A1A1A] placeholder:text-[#1A1A1A]/40 outline-none focus:outline-none focus:ring-0 py-2.5 sm:py-3"
+                placeholder="Search rooms, labs, floors…"
                 value={searchQuery}
                 onChange={(e) => {
                   onSearchChange(e.target.value);
                   setShowSuggestions(true);
                 }}
                 onFocus={() => setShowSuggestions(true)}
-                onBlur={() => setTimeout(() => setShowSuggestions(false), 220)} // small delay to allow click handlers on suggestions
+                onBlur={() => setTimeout(() => setShowSuggestions(false), 220)}
                 onKeyDown={(e) => {
                   if (e.key === 'Enter') {
                     setShowSuggestions(false);
-                    setTimeout(() => {
-                      const el = document.getElementById('left-panel-container');
-                      if (el) {
-                        el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                      }
-                    }, 120);
                   }
                 }}
                 id="hero-search-input"
@@ -122,32 +105,23 @@ export default function HeroSearch({
               />
             </div>
             <button
-              onClick={() => {
-                setShowSuggestions(false);
-                setTimeout(() => {
-                  const el = document.getElementById('left-panel-container');
-                  if (el) {
-                    el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                  }
-                }, 120);
-              }}
-              className="bg-[#1A1A1A] hover:bg-[#D1512D] text-[#F9F7F2] px-4 sm:px-6 py-2 sm:py-2.5 rounded text-[9px] sm:text-[10px] uppercase tracking-widest font-extrabold transition-all cursor-pointer shrink-0"
+              onClick={() => setShowSuggestions(false)}
+              className="bg-[#1A1A1A] hover:bg-[#D1512D] text-[#F9F7F2] px-4 sm:px-6 py-2.5 rounded text-[10px] uppercase tracking-widest font-extrabold transition-all cursor-pointer shrink-0 w-full sm:w-auto"
             >
               Look up
             </button>
           </div>
 
-          {/* Floated Suggestions Autocomplete List overlay */}
+          {/* Suggestions dropdown */}
           {showSuggestions && matches.length > 0 && (
-            <div className="absolute left-0 right-0 mt-2 bg-[#FAF9F6] border-2 border-[#1A1A1A] rounded shadow-2xl z-[100] text-left overflow-hidden divide-y divide-[#1A1A1A]/10 max-h-[480px] overflow-y-auto">
-              <div className="bg-[#E5E2D9]/40 px-3.5 py-1.5 text-[8px] font-extrabold uppercase tracking-widest text-[#1A1A1A]/50 font-sans">
-                Suggested Rooms & Locations
+            <div className="absolute left-0 right-0 mt-2 bg-[#FAF9F6] border-2 border-[#1A1A1A] rounded shadow-2xl z-[100] text-left overflow-hidden divide-y divide-[#1A1A1A]/10 max-h-[280px] sm:max-h-[420px] overflow-y-auto">
+              <div className="bg-[#E5E2D9]/40 px-3.5 py-1.5 text-[8px] font-extrabold uppercase tracking-widest text-[#1A1A1A]/50 font-sans sticky top-0">
+                Suggested Rooms &amp; Locations
               </div>
               {matches.map((room) => (
                 <div
                   key={room.id}
                   onMouseDown={() => {
-                    // Trigger the popup modal callback
                     onSuggestionClick({
                       room: {
                         id: room.id,
@@ -165,26 +139,24 @@ export default function HeroSearch({
                     });
                     setShowSuggestions(false);
                   }}
-                  className="px-3 sm:px-4 py-2.5 sm:py-3 hover:bg-[#E5E2D9] cursor-pointer transition-colors flex flex-col sm:flex-row sm:items-center justify-between gap-1 sm:gap-2 font-sans"
+                  className="px-3 sm:px-4 py-2.5 hover:bg-[#E5E2D9] cursor-pointer transition-colors flex items-center justify-between gap-2 font-sans"
                 >
-                  <div className="flex items-center gap-2">
-                    <span className="text-[9px] sm:text-[10px] font-mono font-bold text-white bg-[#1A1A1A] px-1.5 sm:px-2 py-0.5 rounded text-center shrink-0">
+                  <div className="flex items-center gap-2 min-w-0">
+                    <span className="text-[9px] font-mono font-bold text-white bg-[#1A1A1A] px-1.5 py-0.5 rounded shrink-0">
                       {room.id}
                     </span>
-                    <span className="text-xs font-bold text-[#1A1A1A] truncate max-w-[180px] sm:max-w-none">
+                    <span className="text-[11px] sm:text-xs font-bold text-[#1A1A1A] truncate max-w-[140px] sm:max-w-none">
                       {room.id === 'M-202' ? 'SMIU Central Library' : room.name.split(' (')[0]}
                     </span>
                   </div>
-                  <span className="text-[8px] sm:text-[9px] text-[#D1512D] font-extrabold uppercase tracking-widest text-left sm:text-right truncate">
-                    {room.buildingName} • {room.floor}
+                  <span className="text-[8px] text-[#D1512D] font-extrabold uppercase tracking-widest shrink-0 hidden sm:block">
+                    {room.buildingName} · {room.floor}
                   </span>
                 </div>
               ))}
             </div>
           )}
         </div>
-
-        
       </div>
     </section>
   );
