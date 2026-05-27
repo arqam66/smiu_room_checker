@@ -1,5 +1,5 @@
 import { useState, ReactNode } from 'react';
-import { Map, BookOpen, Users, HelpCircle, Menu, X } from 'lucide-react';
+import { Map, BookOpen, Users, HelpCircle, Menu, X, Sun, Moon } from 'lucide-react';
 import logoImg from '../assets/images/smiu_logo_1779567984801.png';
 
 interface TopAppBarProps {
@@ -7,6 +7,8 @@ interface TopAppBarProps {
   onTabChange: (tab: 'map' | 'history' | 'directory') => void;
   onHomeClick: () => void;
   onHelpClick: () => void;
+  isDarkMode: boolean;
+  onToggleTheme: () => void;
 }
 
 export default function TopAppBar({
@@ -14,6 +16,8 @@ export default function TopAppBar({
   onTabChange,
   onHomeClick,
   onHelpClick,
+  isDarkMode,
+  onToggleTheme,
 }: TopAppBarProps) {
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -70,15 +74,32 @@ export default function TopAppBar({
           </button>
         </div>
 
-        {/* Mobile hamburger */}
-        <button
-          className="sm:hidden p-2 rounded text-[#1A1A1A]/70 hover:text-[#1A1A1A] hover:bg-[#1A1A1A]/5 transition-all cursor-pointer"
-          onClick={() => setMenuOpen((v) => !v)}
-          aria-label="Toggle menu"
-          id="navbar-mobile-toggle"
-        >
-          {menuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
-        </button>
+        {/* Action Area (Theme Toggle + Mobile Menu Button) */}
+        <div className="flex items-center gap-1">
+          <button
+            onClick={onToggleTheme}
+            className="p-2 rounded text-[#1A1A1A]/70 hover:text-[#1A1A1A] hover:bg-[#1A1A1A]/5 transition-all cursor-pointer flex items-center justify-center"
+            id="theme-toggle-btn"
+            aria-label="Toggle light/dark theme"
+            title={isDarkMode ? "Switch to Light Mode" : "Switch to Dark Mode"}
+          >
+            {isDarkMode ? (
+              <Sun className="h-4.5 w-4.5 text-amber-500 fill-amber-500 animate-spin-slow" />
+            ) : (
+              <Moon className="h-4.5 w-4.5 text-slate-700 fill-slate-700" />
+            )}
+          </button>
+
+          {/* Mobile hamburger */}
+          <button
+            className="sm:hidden p-2 rounded text-[#1A1A1A]/70 hover:text-[#1A1A1A] hover:bg-[#1A1A1A]/5 transition-all cursor-pointer"
+            onClick={() => setMenuOpen((v) => !v)}
+            aria-label="Toggle menu"
+            id="navbar-mobile-toggle"
+          >
+            {menuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+          </button>
+        </div>
       </div>
 
       {/* Mobile dropdown */}
@@ -106,6 +127,20 @@ export default function TopAppBar({
           >
             <HelpCircle className="h-4 w-4" />
             Help
+          </button>
+
+          {/* Mobile theme toggle */}
+          <button
+            onClick={() => { onToggleTheme(); setMenuOpen(false); }}
+            className="flex items-center gap-2 px-3 py-2.5 rounded text-xs uppercase tracking-wider font-extrabold text-[#1A1A1A]/70 hover:text-[#1A1A1A] hover:bg-[#1A1A1A]/5 transition-all cursor-pointer w-full text-left border-t border-[#1A1A1A]/10 mt-1 pt-2"
+            id="navbar-mobile-theme-toggle"
+          >
+            {isDarkMode ? (
+              <Sun className="h-4 w-4 text-amber-500 fill-amber-500" />
+            ) : (
+              <Moon className="h-4 w-4 text-slate-700 fill-slate-700" />
+            )}
+            <span>{isDarkMode ? "Light Mode" : "Dark Mode"}</span>
           </button>
         </div>
       )}

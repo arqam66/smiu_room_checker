@@ -10,7 +10,7 @@ import FacultyDirectory from './components/FacultyDirectory';
 import { 
   Building2, ChevronRight, HelpCircle, X, 
   Search, Info as InfoIcon, Landmark, Star, BookOpen, Clock, Award,
-  Github, ChevronUp, Map, Users
+  Github, ChevronUp, Map, Users, Sun, Moon
 } from 'lucide-react';
 
 export default function App() {
@@ -25,6 +25,22 @@ export default function App() {
   const [showScrollTop, setShowScrollTop] = useState<boolean>(false);
   const [startBuildingId, setStartBuildingId] = useState<string | null>(null);
 
+  // Dark mode state manager (default is light mode)
+  const [isDarkMode, setIsDarkMode] = useState<boolean>(() => {
+    const saved = localStorage.getItem('theme');
+    return saved === 'dark';
+  });
+
+  useEffect(() => {
+    if (isDarkMode) {
+      document.documentElement.classList.add('dark');
+      localStorage.setItem('theme', 'dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+      localStorage.setItem('theme', 'light');
+    }
+  }, [isDarkMode]);
+
   // Monitor scroll height to conditionally show scroll-to-top button
   useEffect(() => {
     const handleScroll = () => {
@@ -36,11 +52,6 @@ export default function App() {
     };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
-  // Ensure dark mode class is never active on root to force light mode
-  useEffect(() => {
-    document.documentElement.classList.remove('dark');
   }, []);
 
   // Handle selected building change (either lists building or map select)
@@ -172,6 +183,8 @@ export default function App() {
           setActiveTab('map');
         }}
         onHelpClick={() => setShowHelpModal(true)}
+        isDarkMode={isDarkMode}
+        onToggleTheme={() => setIsDarkMode(prev => !prev)}
       />
 
       {/* Main Container */}
@@ -421,7 +434,7 @@ export default function App() {
           {/* Tabs in the footer (same as in the navbar) */}
           <div className="flex flex-col items-center gap-2 w-full max-w-sm mt-2">
             <span className="text-[9px] font-extrabold uppercase tracking-widest text-[#1A1A1A]/40 font-mono">
-              Quick Navigation
+              Quick Navigation & Style
             </span>
             <div className="flex items-center gap-1 bg-[#E5E2D9] p-1 rounded border border-[#1A1A1A]/5 w-full justify-center" id="footer-navigation-tabs">
               <button
@@ -470,6 +483,25 @@ export default function App() {
                 <span>Faculty</span>
               </button>
             </div>
+
+            {/* Footer theme switch button */}
+            <button
+              onClick={() => setIsDarkMode(prev => !prev)}
+              className="mt-2 inline-flex items-center gap-2 px-4 py-1.5 rounded border border-[#1A1A1A]/10 bg-[#FAF9F6]/95 hover:bg-[#FAF9F6] text-[10px] uppercase tracking-wider font-extrabold text-[#1A1A1A]/70 hover:text-[#1A1A1A] transition-all cursor-pointer shadow-sm"
+              id="footer-theme-toggle-btn"
+            >
+              {isDarkMode ? (
+                <>
+                  <Sun className="h-3.5 w-3.5 text-amber-500 fill-amber-500 animate-spin-slow" />
+                  <span>Light Mode</span>
+                </>
+              ) : (
+                <>
+                  <Moon className="h-3.5 w-3.5 text-slate-700 fill-slate-700" />
+                  <span>Dark Mode</span>
+                </>
+              )}
+            </button>
           </div>
 
           <div className="h-[1px] bg-[#1A1A1A]/10 w-24"></div>
