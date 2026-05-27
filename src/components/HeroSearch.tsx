@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Search, BookOpen, Laptop } from 'lucide-react';
 import { BUILDINGS_DATA } from '../data';
 import { Room } from '../types';
+import logoImg from '../assets/images/smiu_logo_1779567984801.png';
 
 interface HeroSearchProps {
   searchQuery: string;
@@ -58,7 +59,7 @@ export default function HeroSearch({
         {/* Official Branded Logo Emblem */}
         <div className="mb-6 h-28 w-28 sm:h-36 sm:w-36 transition-transform hover:scale-105 duration-350 bg-white rounded-2xl shadow-lg border border-[#1A1A1A]/10 p-2.5 overflow-hidden flex items-center justify-center shrink-0">
           <img
-            src="/src/assets/images/smiu_logo_1779567984801.png"
+            src={logoImg}
             alt="SMIU Brand Logo"
             className="h-full w-full object-cover rounded-xl"
             referrerPolicy="no-referrer"

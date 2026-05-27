@@ -1,5 +1,6 @@
 import { useState, ReactNode } from 'react';
 import { Map, BookOpen, Users, HelpCircle, Menu, X } from 'lucide-react';
+import logoImg from '../assets/images/smiu_logo_1779567984801.png';
 
 interface TopAppBarProps {
   activeTab: 'map' | 'history' | 'directory';
@@ -23,8 +24,8 @@ export default function TopAppBar({
   ];
 
   return (
-    <nav className="sticky top-0 z-50 w-full border-b border-[#1A1A1A]/10 bg-[#F9F7F2]/95 backdrop-blur-sm" id="top-app-bar">
-      <div className="max-w-7xl mx-auto px-4 md:px-6 flex items-center justify-between h-14">
+    <nav className="sticky top-0 z-50 w-full border-b border-[#1A1A1A]/10 bg-[#FAF9F6]/95 backdrop-blur-sm" id="top-app-bar">
+      <div className="max-w-7xl mx-auto px-4 md:px-6 flex items-center justify-between h-14 relative">
 
         {/* Brand */}
         <button
@@ -33,7 +34,7 @@ export default function TopAppBar({
           id="navbar-brand-btn"
         >
           <img
-            src="/src/assets/images/smiu_logo_1779567984801.png"
+            src={logoImg}
             className="h-7 w-7 object-cover rounded"
             alt="SMIU Logo"
           />
@@ -43,7 +44,7 @@ export default function TopAppBar({
         </button>
 
         {/* Desktop Nav */}
-        <div className="hidden sm:flex items-center gap-1">
+        <div className="hidden sm:flex items-center gap-1 absolute left-1/2 -translate-x-1/2">
           {navLinks.map(({ tab, label, icon }) => (
             <button
               key={tab}
@@ -82,7 +83,7 @@ export default function TopAppBar({
 
       {/* Mobile dropdown */}
       {menuOpen && (
-        <div className="sm:hidden border-t border-[#1A1A1A]/10 bg-[#F9F7F2] px-4 py-3 flex flex-col gap-1" id="navbar-mobile-menu">
+        <div className="sm:hidden border-t border-[#1A1A1A]/10 bg-[#FAF9F6] px-4 py-3 flex flex-col gap-1" id="navbar-mobile-menu">
           {navLinks.map(({ tab, label, icon }) => (
             <button
               key={tab}

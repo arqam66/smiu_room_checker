@@ -157,7 +157,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-[#F9F7F2] text-[#1A1A1A] flex flex-col font-sans transition-colors duration-300" id="app-root-container">
+    <div className="min-h-screen bg-[#F4F1EA] text-[#1A1A1A] flex flex-col font-sans transition-colors duration-300" id="app-root-container">
       {/* Top Banner Header */}
       <TopAppBar
         activeTab={activeTab}
@@ -540,32 +540,6 @@ export default function App() {
                   <p className="text-[11px] text-[#1A1A1A]/70 leading-relaxed">
                     Switch to the "SMIU History" section from navigation tabs to read the majestic legacy of the university, dating back to 1885 during hassan Ally Effendis era.
                   </p>
-                </div>
-
-                <div className="p-3.5 bg-[#FAF9F6] border border-[#1A1A1A]/12 space-y-1">
-                  <p className="font-serif italic font-bold text-[#D1512D] flex items-center gap-1 mr-1">
-                    <Star className="h-3.5 w-3.5" /> Mock Space Reservations
-                  </p>
-                  <p className="text-[11px] text-[#1A1A1A]/70 leading-relaxed">
-                    Test the reservation module by selecting "Book Space" inside any room info panel. Timetables swap immediately inside memory storage to sync with maps.
-                  </p>
-                </div>
-              </div>
-
-              {/* Administrative Contacts */}
-              <div className="pt-4 border-t border-[#1A1A1A]/10 space-y-2.5">
-                <p className="text-[9px] uppercase tracking-widest text-[#D1512D] font-mono font-bold">Academic Room Coordinator Contacts</p>
-                <div className="grid grid-cols-2 gap-3 text-[10px] text-[#1A1A1A]/70">
-                  <div className="p-2.5 bg-[#E5E2D9] border border-[#1A1A1A]/10 rounded">
-                    <p className="font-bold text-[#1A1A1A]">Main Campus Security Force</p>
-                    <p>Auxiliary Gate, Ground Floor</p>
-                    <p className="font-mono text-[9px] text-[#D1512D] mt-1 font-bold">Ext. 4022</p>
-                  </div>
-                  <div className="p-2.5 bg-[#E5E2D9] border border-[#1A1A1A]/10 rounded">
-                    <p className="font-bold text-[#1A1A1A]">Academic Registrar Office</p>
-                    <p>Main Building, Level One Foyer</p>
-                    <p className="font-mono text-[9px] text-[#D1512D] mt-1 font-bold">registry@smiu.edu.pk</p>
-                  </div>
                 </div>
               </div>
             </div>

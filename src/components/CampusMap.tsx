@@ -42,9 +42,14 @@ export default function CampusMap({
             <ZoomIn className="h-4 w-4" />
           </div>
           <div>
-            <h3 className="font-serif text-lg font-bold text-[#1A1A1A]">
-              Interactive Campus Map
-            </h3>
+            <div className="flex items-center gap-2">
+              <h3 className="font-serif text-lg font-bold text-[#1A1A1A]">
+                Interactive Campus Map
+              </h3>
+              <span className="sm:hidden text-[8px] bg-[#D1512D]/10 text-[#D1512D] border border-[#D1512D]/15 px-2 py-0.5 rounded font-mono animate-pulse shrink-0">
+                Swipe to Pan
+              </span>
+            </div>
             <p className="text-[9px] uppercase tracking-widest font-mono text-[#1A1A1A]/60">SMIU Digital Twin Registry</p>
           </div>
         </div>
@@ -93,9 +98,9 @@ export default function CampusMap({
       </div>
 
       {/* SVG Interactive Map Container with Editorial styling */}
-      <div className="relative w-full aspect-[16/9] min-h-[290px] md:min-h-[420px] bg-[#FAF9F6] border border-[#1A1A1A]/12 rounded-lg overflow-hidden transition-all duration-300">
+      <div className="relative w-full overflow-x-auto overflow-y-hidden md:overflow-hidden border border-[#1A1A1A]/12 rounded-lg bg-[#FAF9F6] transition-all duration-300" id="map-scroll-viewport">
         <div 
-          className={`w-full h-full transition-transform duration-500 ease-out origin-center ${styles.mapScale}`}
+          className={`w-[640px] sm:w-full aspect-[16/9] relative transition-transform duration-500 ease-out origin-center ${styles.mapScale}`}
         >
           {/* Base SVG Drawing */}
           <svg
