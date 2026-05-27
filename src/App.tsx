@@ -25,21 +25,14 @@ export default function App() {
   const [showScrollTop, setShowScrollTop] = useState<boolean>(false);
   const [startBuildingId, setStartBuildingId] = useState<string | null>(null);
 
-  // Dark mode state manager (default is light mode)
-  const [isDarkMode, setIsDarkMode] = useState<boolean>(() => {
-    const saved = localStorage.getItem('theme');
-    return saved === 'dark';
-  });
+  // Dark mode is permanently disabled in the UI
+  const isDarkMode = false;
+  const setIsDarkMode = () => {};
 
   useEffect(() => {
-    if (isDarkMode) {
-      document.documentElement.classList.add('dark');
-      localStorage.setItem('theme', 'dark');
-    } else {
-      document.documentElement.classList.remove('dark');
-      localStorage.setItem('theme', 'light');
-    }
-  }, [isDarkMode]);
+    document.documentElement.classList.remove('dark');
+    localStorage.setItem('theme', 'light');
+  }, []);
 
   // Monitor scroll height to conditionally show scroll-to-top button
   useEffect(() => {
@@ -168,7 +161,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-[#F4F1EA] text-[#1A1A1A] flex flex-col font-sans transition-colors duration-300" id="app-root-container">
+    <div className="min-h-screen bg-[#FAF9F6] text-[#1A1A1A] flex flex-col font-sans transition-colors duration-300" id="app-root-container">
       {/* Top Banner Header */}
       <TopAppBar
         activeTab={activeTab}
