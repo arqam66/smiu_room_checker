@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Building } from '../types';
-import { Compass, RefreshCw, ZoomIn, Info, MapPin } from 'lucide-react';
+import { Compass, RefreshCw, ZoomIn, Info as InfoIcon, MapPin } from 'lucide-react';
 import styles from "./CampusMap.module.css";
 interface CampusMapProps {
   buildings: Building[];
@@ -319,7 +319,7 @@ export default function CampusMap({
             {/* Legend marker warning */}
             {navigationRoute.path && (
               <div className="absolute bottom-6 left-6 flex items-center gap-2 rounded bg-[#FAF9F6] border border-[#1A1A1A]/12 px-3.5 py-1.5 text-[9px] uppercase tracking-wider font-bold text-[#1A1A1A] shadow-sm">
-                <Info className="h-3.5 w-3.5 text-[#D1512D] animate-bounce" />
+                <InfoIcon className="h-3.5 w-3.5 text-[#D1512D] animate-bounce" />
                 <span>Showing route from Main Gate connecting junctions.</span>
               </div>
             )}
