@@ -247,15 +247,6 @@ html.dark, .dark {
   color: white !important;
 }
 
-/* Pill toggle in dark mode: track should look inverted */
-.dark #theme-toggle-btn {
-  background-color: #D1512D !important;
-  border-color: #D1512D !important;
-}
-
-.dark #theme-toggle-btn span {
-  background-color: #FAF9F6 !important;
-}
 
 .dark .text-\[\#F9F7F2\] {
   color: #121210 !important;
@@ -279,7 +270,7 @@ html.dark, .dark {
 }
 
 /* Nav buttons in dark mode */
-.dark nav button:not(#theme-toggle-btn) {
+.dark nav button {
   color: rgba(250, 249, 246, 0.7);
 }
 

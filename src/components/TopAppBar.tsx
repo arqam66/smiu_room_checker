@@ -74,35 +74,8 @@ export default function TopAppBar({
           </button>
         </div>
 
-        {/* Action Area (Theme Toggle + Mobile Menu Button) */}
+        {/* Action Area (Mobile Menu Button) */}
         <div className="flex items-center gap-1">
-          {/* Pill Toggle Switch */}
-          <button
-            onClick={onToggleTheme}
-            role="switch"
-            aria-checked={isDarkMode}
-            id="theme-toggle-btn"
-            aria-label={isDarkMode ? "Switch to Light Mode" : "Switch to Dark Mode"}
-            title={isDarkMode ? "Switch to Light Mode" : "Switch to Dark Mode"}
-            className={`relative inline-flex h-6 w-11 shrink-0 cursor-pointer rounded-full border-2 transition-colors duration-300 focus:outline-none ${
-              isDarkMode
-                ? 'bg-[#1A1A1A] border-[#1A1A1A]'
-                : 'bg-[#1A1A1A]/15 border-[#1A1A1A]/20'
-            }`}
-          >
-            <span
-              className={`pointer-events-none absolute top-0.5 h-4 w-4 transform rounded-full bg-white shadow flex items-center justify-center transition-transform duration-300 ${
-                isDarkMode ? 'translate-x-5' : 'translate-x-0.5'
-              }`}
-            >
-              {isDarkMode ? (
-                <Moon className="h-2.5 w-2.5 text-[#1A1A1A]" />
-              ) : (
-                <Sun className="h-2.5 w-2.5 text-amber-500" />
-              )}
-            </span>
-          </button>
-
           {/* Mobile hamburger */}
           <button
             className="sm:hidden p-2 rounded text-[#1A1A1A]/70 hover:text-[#1A1A1A] hover:bg-[#1A1A1A]/5 transition-all cursor-pointer"
@@ -140,20 +113,6 @@ export default function TopAppBar({
           >
             <HelpCircle className="h-4 w-4" />
             Help
-          </button>
-
-          {/* Mobile theme toggle */}
-          <button
-            onClick={() => { onToggleTheme(); setMenuOpen(false); }}
-            className="flex items-center gap-2 px-3 py-2.5 rounded text-xs uppercase tracking-wider font-extrabold text-[#1A1A1A]/70 hover:text-[#1A1A1A] hover:bg-[#1A1A1A]/5 transition-all cursor-pointer w-full text-left border-t border-[#1A1A1A]/10 mt-1 pt-2"
-            id="navbar-mobile-theme-toggle"
-          >
-            {isDarkMode ? (
-              <Sun className="h-4 w-4 text-amber-500 fill-amber-500" />
-            ) : (
-              <Moon className="h-4 w-4 text-slate-700 fill-slate-700" />
-            )}
-            <span>{isDarkMode ? "Light Mode" : "Dark Mode"}</span>
           </button>
         </div>
       )}

@@ -103,7 +103,7 @@ export default function CampusMap({
         style={{ touchAction: 'pan-x' }}
       >
         <div 
-          className={`w-[560px] xs:w-[640px] sm:w-full aspect-[16/9] relative transition-transform duration-500 ease-out origin-center ${styles.mapScale}`}
+          className={`w-full aspect-[16/9] relative transition-transform duration-500 ease-out origin-center ${styles.mapScale}`}
         >
           {/* Base SVG Drawing */}
           <svg
@@ -325,9 +325,9 @@ export default function CampusMap({
 
             {/* Legend marker warning */}
             {navigationRoute.path && (
-              <div className="absolute bottom-6 left-6 flex items-center gap-2 rounded bg-[#FAF9F6] border border-[#1A1A1A]/12 px-3.5 py-1.5 text-[9px] uppercase tracking-wider font-bold text-[#1A1A1A] shadow-sm">
-                <InfoIcon className="h-3.5 w-3.5 text-[#D1512D] animate-bounce" />
-                <span>Showing route from Main Gate connecting junctions.</span>
+              <div className="absolute bottom-2 left-2 sm:bottom-6 sm:left-6 flex items-center gap-1 sm:gap-2 rounded bg-[#FAF9F6] border border-[#1A1A1A]/12 px-1.5 py-1 sm:px-3.5 sm:py-1.5 text-[7px] sm:text-[9px] uppercase tracking-wider font-extrabold text-[#1A1A1A] shadow-sm max-w-[150px] sm:max-w-none">
+                <InfoIcon className="h-2.5 w-2.5 sm:h-3.5 sm:w-3.5 text-[#D1512D] animate-bounce shrink-0" />
+                <span className="leading-tight">Showing route from Main Gate connecting junctions.</span>
               </div>
             )}
           </div>
