@@ -10,7 +10,7 @@ import FacultyDirectory from './components/FacultyDirectory';
 import { 
   Building2, ChevronRight, HelpCircle, X, 
   Search, Info as InfoIcon, Landmark, Star, BookOpen, Clock, Award,
-  Github, ChevronUp, Map, Users, Sun, Moon
+  Github, ChevronUp, Map, Users
 } from 'lucide-react';
 
 export default function App() {
@@ -484,24 +484,7 @@ export default function App() {
               </button>
             </div>
 
-            {/* Footer theme switch button */}
-            <button
-              onClick={() => setIsDarkMode(prev => !prev)}
-              className="mt-2 inline-flex items-center gap-2 px-4 py-1.5 rounded border border-[#1A1A1A]/10 bg-[#FAF9F6]/95 hover:bg-[#FAF9F6] text-[10px] uppercase tracking-wider font-extrabold text-[#1A1A1A]/70 hover:text-[#1A1A1A] transition-all cursor-pointer shadow-sm"
-              id="footer-theme-toggle-btn"
-            >
-              {isDarkMode ? (
-                <>
-                  <Sun className="h-3.5 w-3.5 text-amber-500 fill-amber-500 animate-spin-slow" />
-                  <span>Light Mode</span>
-                </>
-              ) : (
-                <>
-                  <Moon className="h-3.5 w-3.5 text-slate-700 fill-slate-700" />
-                  <span>Dark Mode</span>
-                </>
-              )}
-            </button>
+
           </div>
 
           <div className="h-[1px] bg-[#1A1A1A]/10 w-24"></div>

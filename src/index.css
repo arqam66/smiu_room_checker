@@ -135,6 +135,11 @@ html.dark, .dark {
   color: #FAF9F6 !important;
 }
 
+/* Root app container bg class */
+.dark .bg-\[\#F4F1EA\] {
+  background-color: #121210 !important;
+}
+
 /* Override utility classes in index.css for custom elements when dark mode is active */
 .dark .bg-\[\#F9F7F2\] {
   background-color: #121210 !important;
@@ -242,6 +247,16 @@ html.dark, .dark {
   color: white !important;
 }
 
+/* Pill toggle in dark mode: track should look inverted */
+.dark #theme-toggle-btn {
+  background-color: #D1512D !important;
+  border-color: #D1512D !important;
+}
+
+.dark #theme-toggle-btn span {
+  background-color: #FAF9F6 !important;
+}
+
 .dark .text-\[\#F9F7F2\] {
   color: #121210 !important;
 }
@@ -249,6 +264,23 @@ html.dark, .dark {
 .dark header {
   background-color: rgba(18, 18, 16, 0.95) !important;
   border-color: rgba(250, 249, 246, 0.1) !important;
+}
+
+/* Nav element (TopAppBar uses <nav>, not <header>) */
+.dark nav {
+  background-color: rgba(18, 18, 16, 0.95) !important;
+  border-color: rgba(250, 249, 246, 0.1) !important;
+}
+
+/* Mobile dropdown nav menu */
+.dark #navbar-mobile-menu {
+  background-color: #1C1C1A !important;
+  border-color: rgba(250, 249, 246, 0.1) !important;
+}
+
+/* Nav buttons in dark mode */
+.dark nav button:not(#theme-toggle-btn) {
+  color: rgba(250, 249, 246, 0.7);
 }
 
 .dark footer {

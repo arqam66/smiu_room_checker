@@ -76,18 +76,31 @@ export default function TopAppBar({
 
         {/* Action Area (Theme Toggle + Mobile Menu Button) */}
         <div className="flex items-center gap-1">
+          {/* Pill Toggle Switch */}
           <button
             onClick={onToggleTheme}
-            className="p-2 rounded text-[#1A1A1A]/70 hover:text-[#1A1A1A] hover:bg-[#1A1A1A]/5 transition-all cursor-pointer flex items-center justify-center"
+            role="switch"
+            aria-checked={isDarkMode}
             id="theme-toggle-btn"
-            aria-label="Toggle light/dark theme"
+            aria-label={isDarkMode ? "Switch to Light Mode" : "Switch to Dark Mode"}
             title={isDarkMode ? "Switch to Light Mode" : "Switch to Dark Mode"}
+            className={`relative inline-flex h-6 w-11 shrink-0 cursor-pointer rounded-full border-2 transition-colors duration-300 focus:outline-none ${
+              isDarkMode
+                ? 'bg-[#1A1A1A] border-[#1A1A1A]'
+                : 'bg-[#1A1A1A]/15 border-[#1A1A1A]/20'
+            }`}
           >
-            {isDarkMode ? (
-              <Sun className="h-4.5 w-4.5 text-amber-500 fill-amber-500 animate-spin-slow" />
-            ) : (
-              <Moon className="h-4.5 w-4.5 text-slate-700 fill-slate-700" />
-            )}
+            <span
+              className={`pointer-events-none absolute top-0.5 h-4 w-4 transform rounded-full bg-white shadow flex items-center justify-center transition-transform duration-300 ${
+                isDarkMode ? 'translate-x-5' : 'translate-x-0.5'
+              }`}
+            >
+              {isDarkMode ? (
+                <Moon className="h-2.5 w-2.5 text-[#1A1A1A]" />
+              ) : (
+                <Sun className="h-2.5 w-2.5 text-amber-500" />
+              )}
+            </span>
           </button>
 
           {/* Mobile hamburger */}
