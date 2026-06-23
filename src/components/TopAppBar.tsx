@@ -40,10 +40,10 @@ export default function TopAppBar({
           <img
             src={logoImg}
             className="h-7 w-7 object-cover rounded"
-            alt="SMIU Logo"
+            alt="SMIU Checker Logo"
           />
           <span className="font-serif font-bold text-[#1A1A1A] text-base">
-            Room Finder
+            SMIU Checker
           </span>
         </button>
 

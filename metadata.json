@@ -1,6 +1,6 @@
 {
-  "name": "Room Finder",
-  "description": "Interactive Academic Navigation and Room Finder system for Sindh Madressatul Islam University (SMIU).",
+  "name": "SMIU Checker",
+  "description": "Interactive Academic Navigation and Room Finder system (SMIU Checker) for Sindh Madressatul Islam University (SMIU).",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }
