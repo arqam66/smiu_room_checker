@@ -1,5 +1,6 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Search, BookOpen, Laptop } from 'lucide-react';
+import { z } from 'zod';
 import { BUILDINGS_DATA } from '../data';
 import { Room } from '../types';
 import logoImg from '../assets/images/smiu_logo_1779567984801.png';
@@ -18,6 +19,13 @@ export default function HeroSearch({
   onSuggestionClick,
 }: HeroSearchProps) {
   const [showSuggestions, setShowSuggestions] = useState(false);
+  const [validationError, setValidationError] = useState<string | null>(null);
+  const [isBotVerified, setIsBotVerified] = useState(false);
+
+  // Zod schema for search input validation
+  const searchSchema = z.string()
+    .max(50, "Search query is too long")
+    .regex(/^[a-zA-Z0-9\s-]*$/, "Search contains invalid characters");
 
   // Flatten all rooms to enable comprehensive location/room autocomplete
   const allRooms = BUILDINGS_DATA.flatMap((b) =>
@@ -60,9 +68,12 @@ export default function HeroSearch({
         <div className="mb-4 sm:mb-6 h-16 w-16 sm:h-28 sm:w-28 md:h-36 md:w-36 transition-transform hover:scale-105 duration-350 bg-white rounded-2xl shadow-lg border border-[#1A1A1A]/10 p-2 overflow-hidden flex items-center justify-center shrink-0">
           <img
             src={logoImg}
-            alt="SMIU Brand Logo"
+            alt="Sindh Madressatul Islam University Logo"
             className="h-full w-full object-cover rounded-xl"
             referrerPolicy="no-referrer"
+            loading="eager"
+            width={144}
+            height={144}
           />
         </div>
 
@@ -86,11 +97,18 @@ export default function HeroSearch({
               </div>
               <input
                 type="text"
-                className="w-full bg-transparent border-0 ring-0 text-[11px] sm:text-sm italic text-[#1A1A1A] placeholder:text-[#1A1A1A]/40 outline-none focus:outline-none focus:ring-0 py-2.5 sm:py-3"
+                className={`w-full bg-transparent border-0 ring-0 text-[11px] sm:text-sm italic text-[#1A1A1A] placeholder:text-[#1A1A1A]/40 outline-none focus:outline-none focus:ring-0 py-2.5 sm:py-3 ${validationError ? 'text-red-500' : ''}`}
                 placeholder="Search rooms, labs, floors…"
                 value={searchQuery}
                 onChange={(e) => {
-                  onSearchChange(e.target.value);
+                  const value = e.target.value;
+                  const result = searchSchema.safeParse(value);
+                  if (!result.success) {
+                    setValidationError(result.error.errors[0].message);
+                  } else {
+                    setValidationError(null);
+                  }
+                  onSearchChange(value);
                   setShowSuggestions(true);
                 }}
                 onFocus={() => setShowSuggestions(true)}
@@ -105,11 +123,34 @@ export default function HeroSearch({
               />
             </div>
             <button
-              onClick={() => setShowSuggestions(false)}
-              className="bg-[#1A1A1A] hover:bg-[#D1512D] text-[#F9F7F2] px-4 sm:px-6 py-2.5 rounded text-[10px] uppercase tracking-widest font-extrabold transition-all cursor-pointer shrink-0 w-full sm:w-auto"
+              onClick={() => {
+                if (!isBotVerified) {
+                  alert("Please complete the bot verification.");
+                  return;
+                }
+                setShowSuggestions(false);
+              }}
+              className={`${isBotVerified ? 'bg-[#1A1A1A] hover:bg-[#D1512D]' : 'bg-gray-400 cursor-not-allowed'} text-[#F9F7F2] px-4 sm:px-6 py-2.5 rounded text-[10px] uppercase tracking-widest font-extrabold transition-all shrink-0 w-full sm:w-auto`}
+              disabled={!isBotVerified}
             >
               Look up
             </button>
+          </div>
+          {validationError && (
+            <div className="absolute left-0 right-0 -bottom-6 text-left">
+              <span className="text-[10px] text-red-600 font-bold bg-white/80 px-2 py-0.5 rounded border border-red-200">{validationError}</span>
+            </div>
+          )}
+
+          {/* Bot Protection Placeholder (Turnstile) */}
+          <div className="mt-4 flex justify-center">
+            <div
+              className="cf-turnstile border border-[#1A1A1A]/10 rounded bg-white p-2 text-[9px] font-mono text-[#1A1A1A]/60 flex items-center gap-2 cursor-pointer hover:bg-gray-50"
+              onClick={() => setIsBotVerified(true)}
+            >
+              <div className={`w-3 h-3 rounded-full ${isBotVerified ? 'bg-green-500' : 'bg-blue-500 animate-pulse'}`}></div>
+              {isBotVerified ? 'Verified Student Access' : 'Click to verify student session'}
+            </div>
           </div>
 
           {/* Suggestions dropdown */}
