@@ -3,10 +3,177 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SMIU Room Finder | Smart Campus Navigation & Wayfinding</title>
+    <title>SMIU Room Finder | Find Classrooms & Rooms Instantly</title>
     <link rel="icon" type="image/png" href="/src/assets/images/smiu_logo_1779567984801.png" />
-    <meta name="description" content="Locate lecture halls, computer labs, libraries, and facilities across the SMIU campus. Find step-by-step directions, real-time room availability, and amenities." />
+    <meta name="description" content="Find classrooms, lecture rooms, labs, and academic locations quickly using SMIU Room Finder. The fastest room search tool for Sindh Madressatul Islam University students." />
+    <meta name="keywords" content="SMIU Room Finder, SMIU US Checker, Classroom Finder, Room Locator, Campus Navigation, Student Utility" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://smiuschecker.vercel.app/" />
+    <meta property="og:title" content="SMIU Room Finder | Find Classrooms & Rooms Instantly" />
+    <meta property="og:description" content="Find classrooms, lecture rooms, labs, and academic locations quickly using SMIU Room Finder. The fastest room search tool for Sindh Madressatul Islam University students." />
+    <meta property="og:image" content="https://smiuschecker.vercel.app/og-image.png" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://smiuschecker.vercel.app/" />
+    <meta property="twitter:title" content="SMIU Room Finder | Find Classrooms & Rooms Instantly" />
+    <meta property="twitter:description" content="Find classrooms, lecture rooms, labs, and academic locations quickly using SMIU Room Finder. The fastest room search tool for Sindh Madressatul Islam University students." />
+    <meta property="twitter:image" content="https://smiuschecker.vercel.app/og-image.png" />
+
+    <link rel="canonical" href="https://smiuschecker.vercel.app/" />
+    <meta name="google-site-verification" content="7R75IMrk-WUlZ-qLTDPFKFcKl4uUJMGIIWubKh6xe-0" />
     <script defer src="https://cloud.umami.is/script.js" data-website-id="3a153b38-4ffb-42c0-9378-bede0dd6167e"></script>
+
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX');
+    </script>
+
+    <!-- Microsoft Clarity -->
+    <script type="text/javascript">
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "XXXXXXXXXX");
+    </script>
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "SMIU Room Finder",
+      "url": "https://smiuschecker.vercel.app/",
+      "logo": "https://smiuschecker.vercel.app/src/assets/images/smiu_logo_1779567984801.png",
+      "description": "The official room finder utility for Sindh Madressatul Islam University students and faculty."
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "SMIU Room Finder",
+      "url": "https://smiuschecker.vercel.app/",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://smiuschecker.vercel.app/?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "SMIU Room Finder"
+      }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "SMIU Room Finder",
+      "description": "Find classrooms, lecture rooms, labs, and academic locations quickly using SMIU Room Finder.",
+      "applicationCategory": "EducationalApplication",
+      "operatingSystem": "All",
+      "url": "https://smiuschecker.vercel.app/",
+      "featureList": [
+        "Classroom searching",
+        "Campus navigation",
+        "Building directory",
+        "Real-time room status",
+        "Historical campus information"
+      ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is SMIU Room Finder?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "SMIU Room Finder is a digital tool designed to help students and faculty locate classrooms, labs, and other facilities across the Sindh Madressatul Islam University campus quickly and easily."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does SMIU US Checker work?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "By entering a room number or building name into the search bar, the US Checker scans the campus database to provide the exact location, floor, and amenities of the requested space."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How can students find classrooms at SMIU?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Students can use this online portal to search by room ID or browse through the building directory to find their assigned classrooms for various semesters."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I search room numbers instantly?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, the search functionality is designed for speed, providing instant suggestions as you type to help you find your destination in real-time."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is SMIU Room Finder free?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Absolutely. This is a free student utility platform created to enhance the campus experience for everyone at SMIU."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does it work for all departments?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, the tool covers major buildings including the Main Building, Talpur House, Auxiliary Building, and the IT Tower, serving all departments within these premises."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How accurate is room information?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The information is based on the official campus registry and is regularly reviewed to ensure high accuracy for students and faculty."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can freshmen use this tool?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, it is highly recommended for freshmen to help them navigate the campus during their orientation and first semester at university."
+          }
+        }
+      ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://smiuschecker.vercel.app/"
+      }]
+    }
+    </script>
   </head>
   <body>
     <div id="root"></div>

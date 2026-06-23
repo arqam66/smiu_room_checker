@@ -113,7 +113,7 @@ export default function App() {
 
   // Global search compilation across all buildings and rooms with robust normalization
   const allMatchingRooms: { room: Room; buildingName: string; buildingId: string }[] = [];
-  if (searchQuery.trim().length > 0) {
+  if (searchQuery.trim().length > 0 && searchQuery.length <= 50) {
     const normalize = (str: string) => str.toLowerCase().replace(/[^a-z0-9]/g, '');
     const cleanQuery = normalize(searchQuery);
 
@@ -416,6 +416,113 @@ export default function App() {
               />
 
             </div>
+
+            {/* SEO Content Section */}
+            <section className="mt-16 space-y-12 border-t border-[#1A1A1A]/10 pt-16" id="seo-content">
+              <div className="max-w-4xl mx-auto space-y-8">
+                <div className="text-center space-y-4">
+                  <h1 className="font-serif text-4xl md:text-5xl font-black italic text-[#1A1A1A]">SMIU Room Finder</h1>
+                  <p className="text-xl text-[#D1512D] font-bold">Find Your Classroom Instantly with SMIU US Checker</p>
+                </div>
+
+                <div className="prose prose-slate max-w-none text-[#1A1A1A]/80 font-serif leading-relaxed space-y-6">
+                  <p>
+                    Welcome to the <strong>SMIU Room Finder</strong>, the premier digital utility designed specifically for the students, faculty, and visitors of Sindh Madressatul Islam University. Navigating a historic campus with a blend of colonial architecture and modern infrastructure can be challenging, especially for newcomers. Our platform, also known as the <strong>SMIU US Checker</strong>, serves as a comprehensive <strong>SMIU Classroom Finder</strong> and <strong>SMIU Building Finder</strong>, ensuring that you never miss a lecture or a meeting due to navigation difficulties.
+                  </p>
+
+                  <h2 className="text-2xl font-bold text-[#1A1A1A] italic">What is the SMIU Room Finder?</h2>
+                  <p>
+                    The SMIU Room Finder is a highly optimized <strong>SMIU Room Locator</strong> tool that provides real-time information about classrooms, laboratories, auditoriums, and other academic spaces across the campus. Whether you are looking for a specific room in the historic Main Building, the Talpur House, or the state-of-the-art IT Tower, our <strong>SMIU Room Search</strong> tool has you covered. It is more than just a map; it's a <strong>SMIU Navigation Tool</strong> that understands the unique layout of our university.
+                  </p>
+
+                  <h2 className="text-2xl font-bold text-[#1A1A1A] italic">Who is it for?</h2>
+                  <p>
+                    This platform is tailor-made for the entire SMIU community. <strong>New Students (Freshmen)</strong> will find it particularly useful during their first few weeks on campus as they transition into university life. <strong>Existing Students</strong> can use it to quickly locate elective classrooms or new lab facilities. <strong>Faculty Members</strong> can verify room availability for extra sessions, and <strong>Visitors or Guests</strong> attending seminars at the Shahnawaz Bhutto Auditorium can find their way with ease.
+                  </p>
+
+                  <h2 className="text-2xl font-bold text-[#1A1A1A] italic">How it Helps Students</h2>
+                  <p>
+                    Time is a precious resource in academic life. The <strong>SMIU Student Utility</strong> platform helps students save time by providing instant directions. Instead of wandering around different floors, you can simply use the <strong>SMIU Classroom Search</strong> to find the exact floor and building. The tool also provides information on room capacity and amenities, such as air conditioning and projector availability, which is essential for planning study groups or presentations.
+                  </p>
+
+                  <h2 className="text-2xl font-bold text-[#1A1A1A] italic">How Room Searching Works</h2>
+                  <p>
+                    Our <strong>SMIU US Checker</strong> uses a simplified search mechanism. You can enter a room code (e.g., M-101, IT-201) or a keyword (e.g., "Library", "Lab") into the search bar. The system instantly filters through the <strong>SMIU Semester Room Finder</strong> database and displays the building, floor, and current status of the room. The interactive campus map then highlights the building, providing a visual cue for your destination.
+                  </p>
+
+                  <h2 className="text-2xl font-bold text-[#1A1A1A] italic">Benefits of Using the SMIU Room Finder</h2>
+                  <ul className="list-disc pl-6 space-y-2">
+                    <li><strong>Instant Location:</strong> Find any classroom across the campus in seconds.</li>
+                    <li><strong>Detailed Information:</strong> Get insights into room capacity, floor level, and available facilities.</li>
+                    <li><strong>Wayfinding Assistance:</strong> Receive step-by-step directions from one building to another.</li>
+                    <li><strong>Mobile Friendly:</strong> Access the tool on the go using your smartphone or tablet.</li>
+                    <li><strong>Academic Efficiency:</strong> Minimize stress and maximize your time for learning and research.</li>
+                  </ul>
+
+                  <p>
+                    As a <strong>Sindh Madressatul Islam University Room Finder</strong>, we are committed to improving campus accessibility. Our <strong>SMIU Building and Room Locator</strong> is constantly updated to reflect changes in room usage and department relocations, making it the most reliable <strong>SMIU Student Classroom Navigation</strong> tool available today.
+                  </p>
+
+                  <h2 className="text-2xl font-bold text-[#1A1A1A] italic">Explore SMIU Campus Landmarks</h2>
+                  <p>
+                    The Sindh Madressatul Islam University campus is a treasure trove of architectural heritage and modern excellence. Using our <strong>SMIU Building Finder</strong>, you can explore key locations such as:
+                  </p>
+                  <ul className="list-disc pl-6 space-y-4">
+                    <li><strong>The Main Building:</strong> A masterpiece of Victorian-Gothic architecture, it houses several historic lecture halls and administrative offices. Our <strong>SMIU Room Search</strong> helps you find rooms like CR-A02 and the grand seminar rooms.</li>
+                    <li><strong>Talpur House:</strong> Known for its historical significance, it now serves as a key academic hub. Use the <strong>SMIU US Checker</strong> to find computer labs and specialized environmental science rooms here.</li>
+                    <li><strong>The IT Tower:</strong> The pinnacle of modern technology on campus, featuring multiple high-tech computer laboratories and advanced lecture halls. Finding IT-201 or IT-501 has never been easier with our <strong>SMIU Room Locator</strong>.</li>
+                    <li><strong>Auxiliary Building:</strong> Home to the Shahnawaz Bhutto Auditorium and various general facilities. It is a central point for many student activities and academic events.</li>
+                  </ul>
+                  <p>
+                    Our mission is to bridge the gap between students and their academic environment. By providing a robust <strong>SMIU Academic Room Search</strong> capability, we empower students to focus more on their studies and less on the logistics of moving between classes. Whether it's the <strong>SMIU Semester Room Finder</strong> you need for your new timetable or just a quick <strong>SMIU Campus Finder</strong> for a one-off meeting, this utility is your reliable companion.
+                  </p>
+
+                  <h2 className="text-2xl font-bold text-[#1A1A1A] italic">How to Locate a Room at SMIU Successfully</h2>
+                  <p>
+                    If you are wondering <strong>how to find my classroom in SMIU</strong> or <strong>how to locate a room at SMIU</strong>, follow these simple steps: First, identify your room number from your registration slip or portal. Second, visit the <strong>SMIU room search tool</strong> at our homepage. Third, <strong>find classroom using US code SMIU</strong> by typing the alphanumeric code into the search bar. Our <strong>SMIU class room finder online</strong> will show you the exact building and floor. This <strong>SMIU room finder for new students</strong> is designed to be intuitive, ensuring that <strong>SMIU student classroom navigation</strong> is accessible to everyone, regardless of their familiarity with the campus layout.
+                  </p>
+                </div>
+
+                {/* FAQ Section */}
+                <div className="space-y-8 bg-[#E5E2D9]/30 p-8 rounded-xl border border-[#1A1A1A]/10" id="faq-section">
+                  <h2 className="text-3xl font-serif font-black italic text-[#1A1A1A] text-center">Frequently Asked Questions</h2>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div className="space-y-2">
+                      <h3 className="font-bold text-[#D1512D]">1. What is SMIU Room Finder?</h3>
+                      <p className="text-sm text-[#1A1A1A]/80">SMIU Room Finder is a digital tool designed to help students and faculty locate classrooms, labs, and other facilities across the Sindh Madressatul Islam University campus quickly and easily.</p>
+                    </div>
+                    <div className="space-y-2">
+                      <h3 className="font-bold text-[#D1512D]">2. How does SMIU US Checker work?</h3>
+                      <p className="text-sm text-[#1A1A1A]/80">By entering a room number or building name into the search bar, the US Checker scans the campus database to provide the exact location, floor, and amenities of the requested space.</p>
+                    </div>
+                    <div className="space-y-2">
+                      <h3 className="font-bold text-[#D1512D]">3. How can students find classrooms at SMIU?</h3>
+                      <p className="text-sm text-[#1A1A1A]/80">Students can use this online portal to search by room ID or browse through the building directory to find their assigned classrooms for various semesters.</p>
+                    </div>
+                    <div className="space-y-2">
+                      <h3 className="font-bold text-[#D1512D]">4. Can I search room numbers instantly?</h3>
+                      <p className="text-sm text-[#1A1A1A]/80">Yes, the search functionality is designed for speed, providing instant suggestions as you type to help you find your destination in real-time.</p>
+                    </div>
+                    <div className="space-y-2">
+                      <h3 className="font-bold text-[#D1512D]">5. Is SMIU Room Finder free?</h3>
+                      <p className="text-sm text-[#1A1A1A]/80">Absolutely. This is a free student utility platform created to enhance the campus experience for everyone at SMIU.</p>
+                    </div>
+                    <div className="space-y-2">
+                      <h3 className="font-bold text-[#D1512D]">6. Does it work for all departments?</h3>
+                      <p className="text-sm text-[#1A1A1A]/80">Yes, the tool covers major buildings including the Main Building, Talpur House, Auxiliary Building, and the IT Tower, serving all departments within these premises.</p>
+                    </div>
+                    <div className="space-y-2">
+                      <h3 className="font-bold text-[#D1512D]">7. How accurate is room information?</h3>
+                      <p className="text-sm text-[#1A1A1A]/80">The information is based on the official campus registry and is regularly reviewed to ensure high accuracy for students and faculty.</p>
+                    </div>
+                    <div className="space-y-2">
+                      <h3 className="font-bold text-[#D1512D]">8. Can freshmen use this tool?</h3>
+                      <p className="text-sm text-[#1A1A1A]/80">Yes, it is highly recommended for freshmen to help them navigate the campus during their orientation and first semester at university.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
           </>
         )}
       </main>
@@ -505,13 +612,13 @@ export default function App() {
 
       {/* HELP MODAL overlay */}
       {showHelpModal && (
-        <div className="fixed inset-0 z-[100] flex items-center justify-center bg-[#1A1A1A]/60 p-4 backdrop-blur-sm animate-fade-in" id="help-modal-overlay">
+        <div className="fixed inset-0 z-[100] flex items-center justify-center bg-[#1A1A1A]/60 p-4 backdrop-blur-sm animate-fade-in" id="help-modal-overlay" role="dialog" aria-modal="true" aria-labelledby="help-modal-title">
           <div className="w-full max-w-lg bg-[#FAF9F6] border border-[#1A1A1A]/15 rounded shadow-xl overflow-hidden">
             {/* Modal Heading */}
             <div className="flex items-center justify-between px-6 py-4.5 border-b border-[#1A1A1A]/10 bg-[#E5E2D9]">
               <div className="flex items-center gap-2 text-[#D1512D]">
-                <HelpCircle className="h-5 w-5" />
-                <h3 className="font-serif italic font-black text-md text-[#1A1A1A]">Room Finder Assistant Registry</h3>
+                <HelpCircle className="h-5 w-5" aria-hidden="true" />
+                <h3 id="help-modal-title" className="font-serif italic font-black text-md text-[#1A1A1A]">Room Finder Assistant Registry</h3>
               </div>
               <button
                 onClick={() => setShowHelpModal(false)}
