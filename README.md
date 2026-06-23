@@ -1,4 +1,4 @@
-# SMIU Room Checker (Room Finder)
+# SMIU Checker (Room Finder)
 
 ## 📚 Project Overview
 A sleek, modern web application that helps students and staff find available rooms across the SM International University (SMIU) campus. It features an interactive map with scaling, smooth animations, and a clean UI built with **React**, **Vite**, **Tailwind CSS**, and **Flowbite** components.

@@ -421,18 +421,18 @@ export default function App() {
             <section className="mt-16 space-y-12 border-t border-[#1A1A1A]/10 pt-16" id="seo-content">
               <div className="max-w-4xl mx-auto space-y-8">
                 <div className="text-center space-y-4">
-                  <h1 className="font-serif text-4xl md:text-5xl font-black italic text-[#1A1A1A]">SMIU Room Finder</h1>
-                  <p className="text-xl text-[#D1512D] font-bold">Find Your Classroom Instantly with SMIU US Checker</p>
+                  <h1 className="font-serif text-4xl md:text-5xl font-black italic text-[#1A1A1A]">SMIU Checker</h1>
+                  <p className="text-xl text-[#D1512D] font-bold">Find Your Classroom Instantly with SMIU Checker</p>
                 </div>
 
                 <div className="prose prose-slate max-w-none text-[#1A1A1A]/80 font-serif leading-relaxed space-y-6">
                   <p>
-                    Welcome to the <strong>SMIU Room Finder</strong>, the premier digital utility designed specifically for the students, faculty, and visitors of Sindh Madressatul Islam University. Navigating a historic campus with a blend of colonial architecture and modern infrastructure can be challenging, especially for newcomers. Our platform, also known as the <strong>SMIU US Checker</strong>, serves as a comprehensive <strong>SMIU Classroom Finder</strong> and <strong>SMIU Building Finder</strong>, ensuring that you never miss a lecture or a meeting due to navigation difficulties.
+                    Welcome to <strong>SMIU Checker</strong>, the premier digital utility designed specifically for the students, faculty, and visitors of Sindh Madressatul Islam University. Navigating a historic campus with a blend of colonial architecture and modern infrastructure can be challenging, especially for newcomers. Our platform, also known as the <strong>SMIU Room Finder</strong>, serves as a comprehensive <strong>SMIU Classroom Finder</strong> and <strong>SMIU Building Finder</strong>, ensuring that you never miss a lecture or a meeting due to navigation difficulties.
                   </p>
 
-                  <h2 className="text-2xl font-bold text-[#1A1A1A] italic">What is the SMIU Room Finder?</h2>
+                  <h2 className="text-2xl font-bold text-[#1A1A1A] italic">What is SMIU Checker?</h2>
                   <p>
-                    The SMIU Room Finder is a highly optimized <strong>SMIU Room Locator</strong> tool that provides real-time information about classrooms, laboratories, auditoriums, and other academic spaces across the campus. Whether you are looking for a specific room in the historic Main Building, the Talpur House, or the state-of-the-art IT Tower, our <strong>SMIU Room Search</strong> tool has you covered. It is more than just a map; it's a <strong>SMIU Navigation Tool</strong> that understands the unique layout of our university.
+                    <strong>SMIU Checker</strong> is a highly optimized <strong>SMIU Room Locator</strong> tool that provides real-time information about classrooms, laboratories, auditoriums, and other academic spaces across the campus. Whether you are looking for a specific room in the historic Main Building, the Talpur House, or the state-of-the-art IT Tower, our <strong>SMIU Room Search</strong> tool has you covered. It is more than just a map; it's a <strong>SMIU Navigation Tool</strong> that understands the unique layout of our university.
                   </p>
 
                   <h2 className="text-2xl font-bold text-[#1A1A1A] italic">Who is it for?</h2>
@@ -447,20 +447,20 @@ export default function App() {
 
                   <h2 className="text-2xl font-bold text-[#1A1A1A] italic">How Room Searching Works</h2>
                   <p>
-                    Our <strong>SMIU US Checker</strong> uses a simplified search mechanism. You can enter a room code (e.g., M-101, IT-201) or a keyword (e.g., "Library", "Lab") into the search bar. The system instantly filters through the <strong>SMIU Semester Room Finder</strong> database and displays the building, floor, and current status of the room. The interactive campus map then highlights the building, providing a visual cue for your destination.
+                    Our <strong>SMIU Checker</strong> uses a simplified search mechanism. You can enter a room code (e.g., M-101, IT-201) or a keyword (e.g., "Library", "Lab") into the search bar. The system instantly filters through the <strong>SMIU Semester Room Finder</strong> database and displays the building, floor, and current status of the room. The interactive campus map then highlights the building, providing a visual cue for your destination.
                   </p>
 
-                  <h2 className="text-2xl font-bold text-[#1A1A1A] italic">Benefits of Using the SMIU Room Finder</h2>
+                  <h2 className="text-2xl font-bold text-[#1A1A1A] italic">Benefits of Using SMIU Checker</h2>
                   <ul className="list-disc pl-6 space-y-2">
-                    <li><strong>Instant Location:</strong> Find any classroom across the campus in seconds.</li>
+                    <li><strong>Instant Location:</strong> Find any classroom across the campus in seconds using SMIU Checker.</li>
                     <li><strong>Detailed Information:</strong> Get insights into room capacity, floor level, and available facilities.</li>
                     <li><strong>Wayfinding Assistance:</strong> Receive step-by-step directions from one building to another.</li>
-                    <li><strong>Mobile Friendly:</strong> Access the tool on the go using your smartphone or tablet.</li>
+                    <li><strong>Mobile Friendly:</strong> Access SMIU Checker on the go using your smartphone or tablet.</li>
                     <li><strong>Academic Efficiency:</strong> Minimize stress and maximize your time for learning and research.</li>
                   </ul>
 
                   <p>
-                    As a <strong>Sindh Madressatul Islam University Room Finder</strong>, we are committed to improving campus accessibility. Our <strong>SMIU Building and Room Locator</strong> is constantly updated to reflect changes in room usage and department relocations, making it the most reliable <strong>SMIU Student Classroom Navigation</strong> tool available today.
+                    As a <strong>Sindh Madressatul Islam University Checker</strong>, we are committed to improving campus accessibility. Our <strong>SMIU Building and Room Locator</strong> is constantly updated to reflect changes in room usage and department relocations, making it the most reliable <strong>SMIU Student Classroom Navigation</strong> tool available today.
                   </p>
 
                   <h2 className="text-2xl font-bold text-[#1A1A1A] italic">Explore SMIU Campus Landmarks</h2>
@@ -469,7 +469,7 @@ export default function App() {
                   </p>
                   <ul className="list-disc pl-6 space-y-4">
                     <li><strong>The Main Building:</strong> A masterpiece of Victorian-Gothic architecture, it houses several historic lecture halls and administrative offices. Our <strong>SMIU Room Search</strong> helps you find rooms like CR-A02 and the grand seminar rooms.</li>
-                    <li><strong>Talpur House:</strong> Known for its historical significance, it now serves as a key academic hub. Use the <strong>SMIU US Checker</strong> to find computer labs and specialized environmental science rooms here.</li>
+                    <li><strong>Talpur House:</strong> Known for its historical significance, it now serves as a key academic hub. Use <strong>SMIU Checker</strong> to find computer labs and specialized environmental science rooms here.</li>
                     <li><strong>The IT Tower:</strong> The pinnacle of modern technology on campus, featuring multiple high-tech computer laboratories and advanced lecture halls. Finding IT-201 or IT-501 has never been easier with our <strong>SMIU Room Locator</strong>.</li>
                     <li><strong>Auxiliary Building:</strong> Home to the Shahnawaz Bhutto Auditorium and various general facilities. It is a central point for many student activities and academic events.</li>
                   </ul>
@@ -479,7 +479,7 @@ export default function App() {
 
                   <h2 className="text-2xl font-bold text-[#1A1A1A] italic">How to Locate a Room at SMIU Successfully</h2>
                   <p>
-                    If you are wondering <strong>how to find my classroom in SMIU</strong> or <strong>how to locate a room at SMIU</strong>, follow these simple steps: First, identify your room number from your registration slip or portal. Second, visit the <strong>SMIU room search tool</strong> at our homepage. Third, <strong>find classroom using US code SMIU</strong> by typing the alphanumeric code into the search bar. Our <strong>SMIU class room finder online</strong> will show you the exact building and floor. This <strong>SMIU room finder for new students</strong> is designed to be intuitive, ensuring that <strong>SMIU student classroom navigation</strong> is accessible to everyone, regardless of their familiarity with the campus layout.
+                    If you are wondering <strong>how to find my classroom in SMIU</strong> or <strong>how to locate a room at SMIU</strong>, follow these simple steps: First, identify your room number from your registration slip or portal. Second, visit the <strong>SMIU Checker search tool</strong> at our homepage. Third, <strong>find classroom using US code SMIU</strong> by typing the alphanumeric code into the search bar. Our <strong>SMIU class room finder online</strong> will show you the exact building and floor. This <strong>SMIU Checker for new students</strong> is designed to be intuitive, ensuring that <strong>SMIU student classroom navigation</strong> is accessible to everyone, regardless of their familiarity with the campus layout.
                   </p>
                 </div>
 
@@ -488,12 +488,12 @@ export default function App() {
                   <h2 className="text-3xl font-serif font-black italic text-[#1A1A1A] text-center">Frequently Asked Questions</h2>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div className="space-y-2">
-                      <h3 className="font-bold text-[#D1512D]">1. What is SMIU Room Finder?</h3>
-                      <p className="text-sm text-[#1A1A1A]/80">SMIU Room Finder is a digital tool designed to help students and faculty locate classrooms, labs, and other facilities across the Sindh Madressatul Islam University campus quickly and easily.</p>
+                      <h3 className="font-bold text-[#D1512D]">1. What is SMIU Checker?</h3>
+                      <p className="text-sm text-[#1A1A1A]/80">SMIU Checker is a digital tool designed to help students and faculty locate classrooms, labs, and other facilities across the Sindh Madressatul Islam University campus quickly and easily.</p>
                     </div>
                     <div className="space-y-2">
-                      <h3 className="font-bold text-[#D1512D]">2. How does SMIU US Checker work?</h3>
-                      <p className="text-sm text-[#1A1A1A]/80">By entering a room number or building name into the search bar, the US Checker scans the campus database to provide the exact location, floor, and amenities of the requested space.</p>
+                      <h3 className="font-bold text-[#D1512D]">2. How does SMIU Checker work?</h3>
+                      <p className="text-sm text-[#1A1A1A]/80">By entering a room number or building name into the search bar, SMIU Checker scans the campus database to provide the exact location, floor, and amenities of the requested space.</p>
                     </div>
                     <div className="space-y-2">
                       <h3 className="font-bold text-[#D1512D]">3. How can students find classrooms at SMIU?</h3>
@@ -591,7 +591,7 @@ export default function App() {
 
           {/* Institutional Title & Github Link */}
           <div className="flex flex-col items-center gap-2">
-            <span className="font-serif text-lg font-black italic text-[#1A1A1A]">Room Finder</span>
+            <span className="font-serif text-lg font-black italic text-[#1A1A1A]">SMIU Checker</span>
             
             <a
               href="https://github.com/arqam66"
@@ -618,7 +618,7 @@ export default function App() {
             <div className="flex items-center justify-between px-6 py-4.5 border-b border-[#1A1A1A]/10 bg-[#E5E2D9]">
               <div className="flex items-center gap-2 text-[#D1512D]">
                 <HelpCircle className="h-5 w-5" aria-hidden="true" />
-                <h3 id="help-modal-title" className="font-serif italic font-black text-md text-[#1A1A1A]">Room Finder Assistant Registry</h3>
+                <h3 id="help-modal-title" className="font-serif italic font-black text-md text-[#1A1A1A]">SMIU Checker Assistant Registry</h3>
               </div>
               <button
                 onClick={() => setShowHelpModal(false)}
@@ -634,7 +634,7 @@ export default function App() {
             {/* Modal Body */}
             <div className="p-6 space-y-4 max-h-[440px] overflow-y-auto">
               <p className="text-xs text-[#1A1A1A]/80 leading-relaxed font-serif italic">
-                The Sindh Madressatul Islam University (SMIU) Room Finder representing a prestigious interactive physical-cyber registry of campus spatial coordinates.
+                The Sindh Madressatul Islam University (SMIU) Checker representing a prestigious interactive physical-cyber registry of campus spatial coordinates.
               </p>
 
               {/* Functional details */}

@@ -104,7 +104,7 @@ export default function HeroSearch({
                   const value = e.target.value;
                   const result = searchSchema.safeParse(value);
                   if (!result.success) {
-                    setValidationError(result.error.errors[0].message);
+                    setValidationError(result.error.issues[0].message);
                   } else {
                     setValidationError(null);
                   }
